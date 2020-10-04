@@ -9,18 +9,16 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
-    - name: Run Cargo Login
-      run: cargo login ${{ secrets.FANTASY_UTIL_API_KEY }}
-    - name: Cargo Package
-      run: cargo package
-    - name: Cargo Publish
-      run: cargo publish
+      - uses: actions/checkout@v2
+      - name: Build
+        run: cargo build --verbose
+      - name: Run tests
+        run: cargo test --verbose
+      - name: Run Cargo Login
+        run: cargo login ${{ secrets.FANTASY_UTIL_API_KEY }}
+      - name: Run Cargo Package
+        run: cargo package
+      - name: Run Cargo Publish
+        run: cargo publish
