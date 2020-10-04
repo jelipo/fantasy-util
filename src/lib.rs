@@ -1,4 +1,5 @@
 pub mod time;
+pub mod bit;
 
 #[cfg(test)]
 mod tests {
