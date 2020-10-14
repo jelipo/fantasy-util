@@ -5,7 +5,7 @@ pub struct SystemLocalTime {}
 /// 为了美观获取当前时间的包装实现
 impl SystemLocalTime {
     ///获取当前的unix纳秒时间
-    /// # Example
+    /// ## Usage
     /// ```
     /// use fantasy_util::time::system_time::SystemLocalTime;
     /// let nanos:u128 = SystemLocalTime::unix_nanos();
@@ -15,7 +15,7 @@ impl SystemLocalTime {
     }
 
     ///获取当前的unix微秒时间
-    /// # Example
+    /// ## Usage
     /// ```
     /// use fantasy_util::time::system_time::SystemLocalTime;
     /// let micros:u128 = SystemLocalTime::unix_micros();
@@ -25,7 +25,7 @@ impl SystemLocalTime {
     }
 
     ///获取当前的unix毫秒时间
-    /// # Example
+    /// ## Usage
     /// ```
     /// use fantasy_util::time::system_time::SystemLocalTime;
     /// let mills:u64 = SystemLocalTime::unix_mills();
@@ -35,7 +35,7 @@ impl SystemLocalTime {
     }
 
     ///获取当前的unix秒时间
-    /// # Example
+    /// ## Usage
     /// ```
     /// use fantasy_util::time::system_time::SystemLocalTime;
     /// let mills:u64 = SystemLocalTime::unix_secs();
