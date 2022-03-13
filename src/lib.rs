@@ -1,10 +1,10 @@
 pub mod time;
 pub mod bit;
 
-//! # Fantasy Util
-//! ## Jelipo custom util lib.
-//! Include *time*,*bit* tool.
-//!
+/// # Fantasy Util
+/// ## Jelipo custom util lib.
+/// Include *time*,*bit* tool.
+///
 
 #[cfg(test)]
 mod tests {
