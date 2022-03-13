@@ -34,44 +34,59 @@ pub trait BitUtil<T> {
 }
 
 impl BitUtil<u8> for u8 {
+    #[inline(always)]
     fn extract(self, off: u8, len: u8) -> u8 { (self >> off) & ((1u8 << len) - 1) }
 
+    #[inline(always)]
     fn get_bit_bool(self, bit: u8) -> bool { self.get_bit(bit) != 0 }
 
+    #[inline(always)]
     fn get_bit(self, bit: u8) -> u8 { ((self >> bit) as u8) & 1 }
 }
 
 impl BitUtil<u16> for u16 {
+    #[inline(always)]
     fn extract(self, off: u8, len: u8) -> u16 { (self >> off) & ((1u16 << len) - 1) }
 
+    #[inline(always)]
     fn get_bit_bool(self, bit: u8) -> bool { self.get_bit(bit) != 0 }
 
+    #[inline(always)]
     fn get_bit(self, bit: u8) -> u8 { ((self >> bit) as u8) & 1 }
 }
 
 
 impl BitUtil<u32> for u32 {
+    #[inline(always)]
     fn extract(self, off: u8, len: u8) -> u32 { (self >> off) & ((1u32 << len) - 1) }
 
+    #[inline(always)]
     fn get_bit_bool(self, bit: u8) -> bool { self.get_bit(bit) != 0 }
 
+    #[inline(always)]
     fn get_bit(self, bit: u8) -> u8 { ((self >> bit) as u8) & 1 }
 }
 
 impl BitUtil<u64> for u64 {
+    #[inline(always)]
     fn extract(self, off: u8, len: u8) -> u64 { (self >> off) & ((1u64 << len) - 1) }
 
+    #[inline(always)]
     fn get_bit_bool(self, bit: u8) -> bool { self.get_bit(bit) != 0 }
 
+    #[inline(always)]
     fn get_bit(self, bit: u8) -> u8 { ((self >> bit) as u8) & 1 }
 }
 
 
 impl BitUtil<u128> for u128 {
+    #[inline(always)]
     fn extract(self, off: u8, len: u8) -> u128 { (self >> off) & ((1u128 << len) - 1) }
 
+    #[inline(always)]
     fn get_bit_bool(self, bit: u8) -> bool { self.get_bit(bit) != 0 }
 
+    #[inline(always)]
     fn get_bit(self, bit: u8) -> u8 { ((self >> bit) as u8) & 1 }
 }
 
@@ -84,6 +99,6 @@ mod tests {
     fn it_works() {
         let a: u32 = 0b1001_1001;
         let i = a.extract(3, 4);
-        assert_eq!(0b0011, a.extract(3, 4));
+        assert_eq!(0b0011, i);
     }
 }
