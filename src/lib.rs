@@ -1,5 +1,6 @@
 pub mod time;
 pub mod bit;
+pub mod slice;
 
 /// # Fantasy Util
 /// ## Jelipo custom util lib.
