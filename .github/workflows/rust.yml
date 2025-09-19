@@ -13,12 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        run: cargo build --verbose
+        run: cargo build --verbose --all-features
       - name: Run tests
-        run: cargo test --verbose
+        run: cargo test --verbose --all-features
       - name: Run Cargo Login
         run: cargo login ${{ secrets.FANTASY_UTIL_API_KEY }}
       - name: Run Cargo Package
-        run: cargo package
+        run: cargo package --all-features
       - name: Run Cargo Publish
-        run: cargo publish
+        run: cargo publish --all-features
