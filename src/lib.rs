@@ -1,6 +1,8 @@
 pub mod time;
 pub mod bit;
-pub mod slice;
+
+#[cfg(feature = "asyncio")]
+mod asyncio;
 
 /// # Fantasy Util
 /// ## Jelipo custom util lib.
