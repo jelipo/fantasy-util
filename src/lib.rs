@@ -1,6 +1,7 @@
 pub mod time;
 pub mod bit;
 
+#[cfg(feature = "asyncio")]
 pub mod asyncio;
 
 /// # Fantasy Util
